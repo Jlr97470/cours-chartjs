@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Website</title>
+        <script src="node_modules/chart.js/dist/chart.umd.min.js"></script>
+    </head>
+    <body>
+        <h1>Notre production :</h1>
+        <div>
+        <canvas id="myChart" width="400" height="100" aria-label="Hello ARIA World" role="img"></canvas>
+        </div>
+        <script>
+            let ctx = document.getElementById("myChart");
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Production de vin en %', 'Production de tire-boucvhons en %',  'Production de fromage en %'],
+                    datasets: [{
+                    label: 'Production',
+                    data: [60, 10, 30],
+                    backgroundColor: ['red', 'blue', 'yellow', 'rgba(255, 99, 132, 0.2)'],
+                    }]
+                },
+                options: {
+                    plugins: {
+                    title: {
+                        display: false,
+                        text: 'Notre production :'
+                    },
+                    },
+                    legend: {
+                        position: ''
+                    }
+                }
+            });
+        </script>       
+    </body>    
+</html>

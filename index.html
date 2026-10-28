@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Website</title>
+        <script src="node_modules/chart.js/dist/chart.umd.min.js"></script>
+    </head>
+    <body>
+        <canvas id="myChart" width="400" height="100" aria-label="Hello ARIA World" role="img"></canvas>
+        <script>
+            let ctx = document.getElementById("myChart");
+            new Chart(ctx, {
+                type: "pie",
+                data: {
+                    labels: ['Paris', 'New-York', 'Madrid', 'Moscou', 'Berlin', 'Auckland'],
+                    datasets: [{
+                    label: ' Nombre d’habitants',
+                    data: [12, 19, 7, 5, 2, 3],
+                    backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple', 'orange']
+                    }]
+                },
+                options: {
+                    plugins: {
+                    title: {
+                        display: true,
+                        text: 'Mon premier graphique avec Chart Js'
+                    },
+                    },
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            });
+        </script>       
+    </body>    
+</html>
