@@ -1,2 +1,2 @@
 # Exemple chartjs
-HTML 5 Libriaire chartjs
+HTML 5 Librairie chartjs
